@@ -6,6 +6,6 @@ import Layout from '@/components/Layout.vue'
 describe('Layout', () => {
   it('renders properly', () => {
     const wrapper = mount(Layout)
-    expect(wrapper.text()).toContain('Test')
+    expect(wrapper.text()).toContain('Várkonyi')
   })
 })
