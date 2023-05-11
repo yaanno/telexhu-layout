@@ -3,6 +3,24 @@
 
 @layer main {
   body {
-    font-family: Inter,Helvetica,Arial,sans-serif;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+  }
+  header {
+    text-align: center;
+  }
+  main {
+    max-width: 1120px;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+  }
+
+  .layout__content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .item__details a {
+    text-decoration: none;
   }
 }

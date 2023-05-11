@@ -1,5 +1,33 @@
+<script setup lang="ts">
+import LayoutItem from './LayoutItem.vue'
+// @ts-ignore
+import data from '@/data.json'
+</script>
+
 <template>
-  <div>
-    <p>Test</p>
+  <div class="layout__item">
+    <div class="layout__header"></div>
+    <div class="layout__content">
+      <LayoutItem v-for="(item, index) in data" :key="index">
+        <template #image>
+          <img
+            src="https://assets.telex.hu/images/20230511/1683788698-temp-klEgEC_cimlap-normal.jpg"
+            srcset="
+              https://assets.telex.hu/images/20230511/1683788698-temp-klEgEC_cimlap-normal@1x.jpg 1x,
+              https://assets.telex.hu/images/20230511/1683788698-temp-klEgEC_cimlap-normal@2x.jpg 2x,
+              https://assets.telex.hu/images/20230511/1683788698-temp-klEgEC_cimlap-normal@3x.jpg 3x,
+              https://assets.telex.hu/images/20230511/1683788698-temp-klEgEC_cimlap-normal@4x.jpg 4x
+            "
+            :alt="item.details"
+            loading="lazy"
+          />
+        </template>
+        <template #details>
+          <h2>
+            <a :href="item.url">{{ item.details }}</a>
+          </h2>
+        </template>
+      </LayoutItem>
+    </div>
   </div>
 </template>
