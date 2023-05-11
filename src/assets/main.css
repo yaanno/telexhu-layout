@@ -1,0 +1,8 @@
+@import './normalize.css';
+@import './base.css';
+
+@layer main {
+  body {
+    font-family: Inter,Helvetica,Arial,sans-serif;
+  }
+}
