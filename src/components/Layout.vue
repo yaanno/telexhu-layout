@@ -13,7 +13,7 @@ const thirdGroupData = data.slice(0, 3)
     <div class="layout__content">
       <BlockGroup :data="firstGroupData" />
       <BlockGroup :data="secondGroupData" />
-      <BlockGroup :data="thirdGroupData" style="--stacked: true" />
+      <BlockGroup :data="thirdGroupData" />
     </div>
   </div>
 </template>
